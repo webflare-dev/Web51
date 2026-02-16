@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYDRA X | Premium Steel Hydration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">HYDRA</span>
+                <span class="logo-x">X</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#features" class="mobile-link">Features</a>
+        <a href="#technology" class="mobile-link">Technology</a>
+        <a href="#about" class="mobile-link">About</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <!-- Background Effects -->
+        <div class="hero-bg">
+            <div class="grid-lines"></div>
+            <div class="glow-orb orb1"></div>
+            <div class="glow-orb orb2"></div>
+        </div>
+
+        <!-- Floating Particles -->
+        <div class="particles" id="particles"></div>
+
+        <div class="hero-content">
+            <!-- Text Side -->
+            <div class="hero-text">
+                <p class="hero-tag">
+                    <span class="tag-line"></span>
+                    PREMIUM HYDRATION TECHNOLOGY
+                    <span class="tag-line"></span>
+                </p>
+                <h1 class="hero-title">
+                    <span class="title-word">PURE</span>
+                    <span class="title-word">STEEL</span>
+                    <span class="title-word highlight">PERFECTION</span>
+                </h1>
+                <p class="hero-desc">
+                    Experience the pinnacle of hydration engineering. Crafted from 
+                    aerospace-grade stainless steel with revolutionary thermal retention.
+                </p>
+                <div class="hero-badges">
+                    <div class="badge">
+                        <span>❄️</span>
+                        <span>48H COLD</span>
+                    </div>
+                    <div class="badge">
+                        <span>🔥</span>
+                        <span>24H HOT</span>
+                    </div>
+                    <div class="badge">
+                        <span>♻️</span>
+                        <span>ECO-SAFE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottle Side -->
+            <div class="hero-bottle">
+                <div class="bottle-wrapper">
+                    <!-- Water Effect -->
+                    <div class="water-effect">
+                        <div class="water-surface"></div>
+                        <div class="ripple r1"></div>
+                        <div class="ripple r2"></div>
+                        <div class="ripple r3"></div>
+                    </div>
+
+                    <!-- Bubbles Container -->
+                    <div class="bubbles" id="bubbles"></div>
+
+                    <!-- Bottle Image -->
+                    <div class="bottle-img-wrap" id="bottleWrap">
+                        <img 
+                            src="Bottle.jpg" 
+                            alt="HYDRA X Bottle" 
+                            class="bottle-img"
+                            onerror="this.style.display='none'; document.getElementById('fallbackBottle').style.display='block';"
+                        >
+                        <!-- Fallback SVG Bottle -->
+                        <div id="fallbackBottle" class="fallback-bottle">
+                            <svg viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#3a3a3a"/>
+                                        <stop offset="50%" stop-color="#2a2a2a"/>
+                                        <stop offset="100%" stop-color="#1a1a1a"/>
+                                    </linearGradient>
+                                    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="transparent"/>
+                                        <stop offset="50%" stop-color="rgba(255,255,255,0.1)"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- Cap -->
+                                <ellipse cx="100" cy="30" rx="35" ry="12" fill="#333"/>
+                                <rect x="65" y="30" width="70" height="25" fill="#333"/>
+                                <ellipse cx="100" cy="55" rx="35" ry="8" fill="#2a2a2a"/>
+                                <!-- Neck -->
+                                <path d="M70 55 L65 90 L60 100 L60 100 L140 100 L135 90 L130 55 Z" fill="url(#bottleGrad)"/>
+                                <!-- Body -->
+                                <path d="M55 100 L50 350 C50 370 70 380 100 380 C130 380 150 370 150 350 L145 100 Z" fill="url(#bottleGrad)"/>
+                                <!-- Shine -->
+                                <path d="M70 100 L68 350 C68 360 80 365 85 365 L85 100 Z" fill="url(#shineGrad)" opacity="0.5"/>
+                                <!-- Bottom -->
+                                <ellipse cx="100" cy="375" rx="50" ry="10" fill="#151515"/>
+                                <!-- Label Area -->
+                                <rect x="60" y="180" width="80" height="100" rx="5" fill="#222" opacity="0.5"/>
+                                <text x="100" y="220" text-anchor="middle" fill="#00d4ff" font-family="Orbitron" font-size="14" font-weight="bold">HYDRA</text>
+                                <text x="100" y="245" text-anchor="middle" fill="#666" font-family="Orbitron" font-size="10">X</text>
+                            </svg>
+                        </div>
+                        <div class="bottle-shine"></div>
+                        <div class="bottle-glow"></div>
+                    </div>
+
+                    <!-- Light beams -->
+                    <div class="light-beams">
+                        <div class="beam b1"></div>
+                        <div class="beam b2"></div>
+                    </div>
+
+                    <!-- Rings -->
+                    <div class="rings">
+                        <div class="ring r1"></div>
+                        <div class="ring r2"></div>
+                        <div class="ring r3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ENGINEERED EXCELLENCE</span>
+                <h2 class="section-title">
+                    REVOLUTIONARY <span class="highlight">FEATURES</span>
+                </h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" stroke="#00d4ff" stroke-width="2" fill="none"/><path d="M30 15 L30 45 M20 30 L40 30" stroke="#00d4ff" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Triple-Wall Insulation</h3>
+                    <p>Advanced vacuum technology maintains temperature for extended periods.</p>
+                    <div class="feature-tags">
+                        <span>48H COLD</span>
+                        <span>24H HOT</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60"><polygon points="30,8 52,52 8,52" stroke="#00d4ff" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <h3>Aerospace Steel</h3>
+                    <p>18/8 food-grade stainless steel with anti-corrosion coating.</p>
+                    <div class="feature-tags">
+                        <span>18/8 GRADE</span>
+                        <span>BPA FREE</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60"><rect x="12" y="12" width="36" height="36" rx="8" stroke="#00d4ff" stroke-width="2" fill="none"/><circle cx="30" cy="30" r="10" stroke="#00d4ff" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <h3>Smart Cap System</h3>
+                    <p>One-touch release mechanism with leak-proof seal technology.</p>
+                    <div class="feature-tags">
+                        <span>360° SEAL</span>
+                        <span>ONE-TOUCH</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" stroke="#00d4ff" stroke-width="2" fill="none"/><circle cx="30" cy="30" r="10" stroke="#00d4ff" stroke-width="2" fill="none"/><circle cx="30" cy="30" r="3" fill="#00d4ff"/></svg>
+                    </div>
+                    <h3>Ergonomic Design</h3>
+                    <p>Precision-engineered grip with balanced weight distribution.</p>
+                    <div class="feature-tags">
+                        <span>BALANCED</span>
+                        <span>GRIP-TECH</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology" id="technology">
+        <div class="container">
+            <div class="tech-content">
+                <div class="tech-visual">
+                    <div class="tech-rings">
+                        <div class="tech-ring tr1"></div>
+                        <div class="tech-ring tr2"></div>
+                        <div class="tech-ring tr3"></div>
+                        <div class="tech-core">
+                            <span class="core-title">HYDRA</span>
+                            <span class="core-sub">TECH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-info">
+                    <span class="section-tag">INNOVATION CORE</span>
+                    <h2 class="section-title">
+                        THERMAL <span class="highlight">TECHNOLOGY</span>
+                    </h2>
+                    <p class="tech-desc">
+                        Our proprietary thermal retention system delivers unmatched temperature performance through cutting-edge engineering.
+                    </p>
+
+                    <div class="tech-specs">
+                        <div class="tech-spec">
+                            <span class="spec-num">01</span>
+                            <div class="spec-info">
+                                <h4>Vacuum Chamber</h4>
+                                <p>Double-wall vacuum insulation eliminates thermal transfer.</p>
+                            </div>
+                        </div>
+                        <div class="tech-spec">
+                            <span class="spec-num">02</span>
+                            <div class="spec-info">
+                                <h4>Copper Coating</h4>
+                                <p>Internal copper layer reflects temperature back inward.</p>
+                            </div>
+                        </div>
+                        <div class="tech-spec">
+                            <span class="spec-num">03</span>
+                            <div class="spec-info">
+                                <h4>Nano Seal</h4>
+                                <p>Microscopic seal prevents any air exchange.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section class="specs" id="specs">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">TECHNICAL DATA</span>
+                <h2 class="section-title">
+                    PRODUCT <span class="highlight">SPECIFICATIONS</span>
+                </h2>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="spec-value">750<small>ML</small></span>
+                    <h4>Capacity</h4>
+                    <p>Perfect for all-day hydration</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-value">340<small>G</small></span>
+                    <h4>Weight</h4>
+                    <p>Lightweight yet durable</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-value">26<small>CM</small></span>
+                    <h4>Height</h4>
+                    <p>Fits standard holders</p>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-value">7.5<small>CM</small></span>
+                    <h4>Diameter</h4>
+                    <p>Ergonomic grip</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-tag">OUR PHILOSOPHY</span>
+                    <h2 class="section-title">
+                        DESIGNED FOR <span class="highlight">TOMORROW</span>
+                    </h2>
+                    <p>
+                        At HYDRA X, we believe hydration should be an experience. Our bottles are crafted with obsessive attention to detail.
+                    </p>
+                    <p>
+                        Every curve, every edge is designed to deliver uncompromising performance while maintaining luxury aesthetics.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-num" data-target="50">0</span><span class="stat-suffix">K+</span>
+                            <span class="stat-label">Units Worldwide</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="98">0</span><span class="stat-suffix">%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="25">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Awards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="visual-box">
+                        <span class="big-letter">H</span>
+                        <span class="big-letter">X</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <div class="container">
+            <div class="footer-logo">
+                <span class="logo-text">HYDRA</span>
+                <span class="logo-x">X</span>
+            </div>
+            <p class="footer-tagline">REDEFINING HYDRATION</p>
+            <div class="footer-social">
+                <a href="#">IN</a>
+                <a href="#">TW</a>
+                <a href="#">IG</a>
+                <a href="#">FB</a>
+            </div>
+            <p class="footer-copy">&copy; 2024 HYDRA X. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
